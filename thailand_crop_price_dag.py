@@ -26,7 +26,7 @@ with DAG(
             pandas_kwargs={"encoding": "latin-1"},
         )
 
-        df.to_parquet('home/airflow/gcs/data/thailand_crop_price.aprquet',index = False)
+        df.to_parquet('/home/airflow/gcs/data/thailand_crop_price.parquet',index = False)
 
     t1 = save_data_from_kaggle_to_storage()
     t1
