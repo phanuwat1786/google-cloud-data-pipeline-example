@@ -2,10 +2,11 @@ from airflow.decorators import task
 from airflow import DAG
 from airflow.models import Variable
 import pandas as pd
-
+import pendulum
 with DAG(
     dag_id='thailand_crop_price',
-    start_date=None,
+    start_date=pendulum.parse('2025-09-28',exact = True),
+    schedule=None,
     catchup=False
 ) as dag:
 
