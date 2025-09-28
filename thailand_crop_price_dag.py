@@ -5,7 +5,7 @@ import pandas as pd
 import pendulum
 with DAG(
     dag_id='thailand_crop_price',
-    start_date=pendulum.parse('2025-09-28',exact = True),
+    start_date=pendulum.parse('2025-09-28'),
     schedule=None,
     catchup=False
 ) as dag:
